@@ -1,0 +1,35 @@
+******* What this is *******
+
+Prototype of a simple 3D game made using Java3D ( http://en.wikipedia.org/wiki/Java_3D )
+This was done for a programming challenge in my 1st year OOP class. Development time was about 2 weeks.
+
+******* How to run *******
+
+All that is needed to run the Game is "3DGame.jar" and "run.sh". 
+The run script will extract the relevant resources from the jar and then try to launch the game. On a Linux system, either 32 or 64 bit, it should work out of the box. 
+I haven't tested it on other platforms.
+
+******* How to play *******
+
+The game's objective is simply to capture two randomly placed items(barrels) before the enemies and mines kill you.
+You are equipped with lasers and missiles in your defense, but overuse will temporarily overheat and disable them.
+
+You move with WASD and can independently rotate your torso with QE.
+You aim with the mouse, left-click fires your laser, shift + left-click fires your missiles.
+
+******* Features *******
+
+Short Version: Check out the Screenshots
+
+Long version:
+
+- Environment randomly generated at beginning of game with diamond square algorithm, stored as quads
+- Mipmap texturing of environment based on quad height (i.e. more grass at lower altitude, more dirt at higher)
+- Hermite curve interpolation for realistic missile trajectory
+- Point particle effects + animated gifs for explosions
+- Minimap(generated on the fly) traces player and objectives location
+- Lasers check if selected target can be hit from characters position (if not intermediate obstacle is hit)
+- 3rd person camera follows player
+- Laser tube rotate towards selected target (this one is buggy though)
+- Background music + sounds
+
